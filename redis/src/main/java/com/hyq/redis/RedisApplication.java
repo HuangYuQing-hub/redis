@@ -13,8 +13,6 @@ public class RedisApplication {
         // test mod the code
         System.out.println("Test the mod code  to push to orgin master!");
 
-        // test
-        System.out.println("MMMMMM");
     }
 
 }
