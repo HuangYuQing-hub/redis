@@ -8,5 +8,6 @@ import java.util.List;
  * @date 2021-05-27
  */
 public interface IDoorService {
+
     boolean batchUp(List<Door> list);
 }

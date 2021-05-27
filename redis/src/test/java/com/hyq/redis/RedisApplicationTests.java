@@ -1,5 +1,10 @@
 package com.hyq.redis;
 
+import com.hyq.pojo.Door;
+import com.hyq.service.IDoorService;
+import com.hyq.service.impl.DoorServiceImpl;
+import java.util.ArrayList;
+import java.util.List;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -39,4 +44,15 @@ class RedisApplicationTests {
 
     }
 
+    @Test
+    public void testBatchUp(){
+        List<Door> list = new ArrayList<>();
+        for(int i=0;i<5;i++){
+            Door door =  Door.builder().id(i).flag(3).build();
+            list.add(door);
+        }
+
+        IDoorService doorService = new DoorServiceImpl();
+        doorService.batchUp(list);
+    }
 }

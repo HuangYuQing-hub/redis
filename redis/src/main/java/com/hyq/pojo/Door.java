@@ -1,5 +1,6 @@
 package com.hyq.pojo;
 
+import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Builder;
 import lombok.Data;
 
@@ -9,6 +10,7 @@ import lombok.Data;
  */
 @Data
 @Builder
+@TableName("td_door")
 public class Door {
 
     private Integer id;
